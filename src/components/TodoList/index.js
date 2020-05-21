@@ -18,8 +18,8 @@ export default function ListTodos() {
     let complete = todoList.filter((item) => {
       return (item.id !== id);
     });
-
-    setTodoList(todoList = complete);
+        
+    setTodoList(todoList = complete);    
   }
 
 
@@ -63,17 +63,17 @@ export default function ListTodos() {
 
         <ul>
 
-          {todoList.map((item) => {
+          {todoList.map((item) => {           
 
-            return (
-              <li key={item.id}>
-                <div>
-                  <div className={'checkbox'} onClick={() => { toggleComplete(item.id) }}>
-                  </div>
-                </div>
-                {item.text}
-              </li>
-            );
+             return (
+               <li key={item.id}>
+                 <div>
+                 <div className={'checkbox'} onClick={() => { toggleComplete(item.id) }}>
+                 </div>
+                 </div>                                
+                 {item.text}                
+               </li>
+             );
 
 
           })}
